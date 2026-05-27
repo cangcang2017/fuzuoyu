@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="电商摄影师 · 3年+实战经验 · 静物棚拍 · TikTok跨境广告 · 意向杭州">
+  <title>电商摄影师 · 个人作品集</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+  <!-- 导航 -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav__logo">摄影作品集</a>
+      <button class="nav__toggle" id="navToggle" aria-label="打开菜单">
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#home" class="nav__link">首页</a></li>
+        <li><a href="#portfolio" class="nav__link">作品</a></li>
+        <li><a href="#about" class="nav__link">关于</a></li>
+        <li><a href="#experience" class="nav__link">经历</a></li>
+        <li><a href="#skills" class="nav__link">技能</a></li>
+        <li><a href="#contact" class="nav__link">联系</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 首页 Hero -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=1920&q=80" alt="电商产品摄影" loading="eager">
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <p class="hero__tag">电商摄影师 · 杭州 · 社招</p>
+      <h1 class="hero__title">用视觉<br>驱动转化</h1>
+      <p class="hero__desc">静物棚拍 · 场景化拍摄 · TikTok 跨境广告 · 短视频全流程</p>
+      <div class="hero__meta">
+        <span>期望薪资 8K–10K</span>
+        <span class="hero__meta-divider">|</span>
+        <span>3+ 年电商摄影经验</span>
+      </div>
+      <a href="#portfolio" class="btn btn--outline">浏览作品</a>
+    </div>
+    <div class="hero__scroll">
+      <span>向下滚动</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- 求职意向 -->
+  <section class="intent section" id="intent">
+    <div class="container">
+      <div class="intent__grid">
+        <div class="intent__item">
+          <span class="intent__label">意向岗位</span>
+          <strong>电商摄影师</strong>
+        </div>
+        <div class="intent__item">
+          <span class="intent__label">意向城市</span>
+          <strong>杭州</strong>
+        </div>
+        <div class="intent__item">
+          <span class="intent__label">期望薪资</span>
+          <strong>8K – 10K</strong>
+        </div>
+        <div class="intent__item">
+          <span class="intent__label">求职类型</span>
+          <strong>社招</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品集 -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">精选作品</h2>
+        <p class="section__desc">涵盖跨境电商、新媒体平台等多场景视觉创作</p>
+      </div>
+
+      <div class="filter-wrap">
+        <div class="filter" id="filterBar"></div>
+      </div>
+      <div class="filter-state" id="filterState"></div>
+
+      <div id="portfolioMain">
+        <div id="gallery"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类详情（查看全部） -->
+  <section class="category-view section" id="categoryView" hidden>
+    <div class="container">
+      <button type="button" class="category-view__back" id="categoryBack">← 返回作品集</button>
+      <div class="category-view__header">
+        <h2 class="section__title" id="categoryViewTitle"></h2>
+        <p class="category-view__meta" id="categoryViewMeta"></p>
+      </div>
+      <div class="gallery gallery--full" id="categoryGallery"></div>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section class="about section" id="about">
+    <div class="container about__grid">
+      <div class="about__image">
+        <img src="https://images.unsplash.com/photo-1554048612-b407248176c4?w=800&q=80" alt="摄影师工作场景">
+        <div class="about__image-frame"></div>
+      </div>
+      <div class="about__content">
+        <h2 class="section__title">关于我</h2>
+        <ul class="about__info">
+          <li><span>性别</span><strong>男</strong></li>
+          <li><span>年龄</span><strong>24 岁</strong></li>
+          <li><span>学历</span><strong>本科</strong></li>
+          <li><span>专业</span><strong>网络工程</strong></li>
+        </ul>
+        <p class="about__text">
+          本人拥有 3 年以上电商摄影实战经验，熟悉静物、场景化及短视频素材的全流程拍摄工作。
+          能独立完成棚拍与外拍任务，具备扎实的构图、色彩搭配与光影控制能力。
+        </p>
+        <p class="about__text">
+          熟练掌握 Photoshop、Lightroom 等图像处理软件，达芬奇、CapCut 等视频后期软件，
+          并具备专业的视频剪辑能力，可协同后期高效完成素材整理与归档。具备良好的审美与创意能力，
+          能快速理解品牌调性与运营需求，善于团队沟通协作，抗压能力强，执行力高，
+          能确保视觉内容高质量、高效输出。
+        </p>
+        <ul class="about__stats">
+          <li>
+            <strong>3+</strong>
+            <span>年电商摄影经验</span>
+          </li>
+          <li>
+            <strong>Top 10%</strong>
+            <span>专业排名</span>
+          </li>
+          <li>
+            <strong>5+</strong>
+            <span>平台运营经验</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工作经历 & 教育经历 -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">工作经历</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline__item">
+          <div class="timeline__date">2025.12 – 至今</div>
+          <div class="timeline__body">
+            <h3>杭州赞说电子商务有限公司</h3>
+            <p class="timeline__role">摄影师 · 跨境电商</p>
+            <ul class="timeline__list">
+              <li><strong>全品类视觉拍摄：</strong>负责跨境电商宠物用品全品类视觉创作，独立完成产品静物、场景化棚拍/外拍、精修、短视频剪辑调色全流程，风格清新通透、氛围感强，适配海外平台审美。</li>
+              <li><strong>TikTok 跨境广告创作：</strong>深耕 TikTok 跨境广告内容，吃透平台流量逻辑，运用 AI 创意工具、达芬奇、剪映产出高转化短视频广告，画面干净、光影通透、种草力强。</li>
+              <li><strong>标准化素材体系搭建：</strong>从零搭建并维护团队云端素材库（钉盘/夸克网盘/移动硬盘），统一分类归档标准，规范物料管理，显著提升团队协作效率与素材复用率。</li>
+              <li><strong>团队技能赋能培训：</strong>主导内部 CapCut 实操培训，沉淀标准化剪辑流程与方法论，有效提升团队整体内容产出能力。</li>
+              <li><strong>日常内容稳定输出：</strong>紧密配合店铺及跨境账号运营节奏，持续稳定输出高质量图文、短视频物料，保障日常更新与营销推广需求。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline__item">
+          <div class="timeline__date">2025.4 – 2025.11</div>
+          <div class="timeline__body">
+            <h3>南京梦舞文化咨询有限公司</h3>
+            <p class="timeline__role">摄影师 · 新媒体</p>
+            <ul class="timeline__list">
+              <li><strong>内容制作与发布：</strong>负责前期拍摄（相机、稳定器）与后期全流程制作（精修、剪辑、调色），确保内容符合平台调性；经审核后按时发布至公司抖音、小红书、微信视频号，保障视觉内容稳定、高质量输出。</li>
+              <li><strong>活动拍摄与素材资产化：</strong>全面覆盖公司各类活动拍摄（清明营、五一营、端午营等营地项目及内部团建）。拍摄后独立完成素材分类与整理，主导搭建标准化素材库并建立清晰索引系统，显著提升素材检索效率与二次复用价值。</li>
+              <li><strong>账号运营与跨部门协同：</strong>负责官方账号日常运营与宣发节奏统筹，主动对接市场、销售等部门，精准获取宣发需求，制定内容发布计划。推动跨部门协作与内容传播效果提升，有效增强账号活跃度与品牌曝光力。</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <div class="section__header section__header--spaced">
+        <h2 class="section__title">教育经历</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline__item">
+          <div class="timeline__date">2023.10 – 2025.4</div>
+          <div class="timeline__body">
+            <h3>安徽科技工程大学</h3>
+            <p class="timeline__role">网络工程 · 本科</p>
+            <ul class="timeline__list">
+              <li>专业排名前 10%，具备扎实的理论基础与专业素养。</li>
+              <li>在校期间担任融媒体摄影部部长，负责统筹摄影活动策划与执行，优化团队工作流程，显著提升拍摄效率与成片质量。</li>
+              <li>主导拍摄的微电影作品，凭借出色的创意构思与专业技术，荣获二等奖，展现了在影像叙事与实战拍摄中的综合能力。</li>
+              <li>独立完成学校校历图片的拍摄任务，严格把控画面细节与视觉呈现，成功提升学校品牌形象的整体统一性与审美水准。</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技能 -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">相关技能</h2>
+      </div>
+      <div class="skills__grid">
+        <div class="skills__group">
+          <h3>摄影灯光</h3>
+          <div class="skills__tags">
+            <span>相机/稳定器操作</span>
+            <span>棚拍/外拍</span>
+            <span>多材质布光方案</span>
+          </div>
+        </div>
+        <div class="skills__group">
+          <h3>后期软件</h3>
+          <div class="skills__tags">
+            <span>Photoshop</span>
+            <span>Lightroom</span>
+            <span>达芬奇</span>
+            <span>剪映</span>
+            <span>CapCut</span>
+          </div>
+        </div>
+        <div class="skills__group">
+          <h3>AI 工具</h3>
+          <div class="skills__tags">
+            <span>AI 创意辅助生成</span>
+          </div>
+        </div>
+        <div class="skills__group">
+          <h3>素材管理</h3>
+          <div class="skills__tags">
+            <span>钉盘体系搭建</span>
+            <span>夸克网盘</span>
+            <span>移动硬盘归档</span>
+            <span>分类归档标准化</span>
+          </div>
+        </div>
+        <div class="skills__group skills__group--wide">
+          <h3>平台经验</h3>
+          <div class="skills__tags">
+            <span>抖音</span>
+            <span>小红书</span>
+            <span>微信视频号</span>
+            <span>TikTok</span>
+            <span>Amazon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="contact section" id="contact">
+    <div class="container contact__grid">
+      <div class="contact__info">
+        <h2 class="section__title">联系我</h2>
+        <p class="contact__text">意向岗位：电商摄影师 · 杭州 · 期望薪资 8K–10K · 社招。欢迎 HR 或招聘负责人联系。</p>
+        <ul class="contact__details">
+          <li>
+            <span class="contact__label">电话</span>
+            <a href="tel:18946571514">189 4657 1514</a>
+          </li>
+          <li>
+            <span class="contact__label">邮箱</span>
+            <a href="mailto:1214405838@qq.com">1214405838@qq.com</a>
+          </li>
+          <li>
+            <span class="contact__label">意向城市</span>
+            <span>杭州</span>
+          </li>
+          <li>
+            <span class="contact__label">学历</span>
+            <span>本科 · 网络工程</span>
+          </li>
+        </ul>
+      </div>
+      <div class="contact__card">
+        <h3>求职意向</h3>
+        <ul class="contact__intent-list">
+          <li>
+            <span>意向岗位</span>
+            <strong>电商摄影师</strong>
+          </li>
+          <li>
+            <span>意向城市</span>
+            <strong>杭州</strong>
+          </li>
+          <li>
+            <span>期望薪资</span>
+            <strong>8K – 10K</strong>
+          </li>
+          <li>
+            <span>求职类型</span>
+            <strong>社招</strong>
+          </li>
+        </ul>
+        <a href="tel:18946571514" class="btn btn--primary">立即联系</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2026 电商摄影师个人作品集</p>
+      <a href="#home" class="footer__top">回到顶部 ↑</a>
+    </div>
+  </footer>
+
+  <!-- 灯箱 -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="关闭">&times;</button>
+    <button class="lightbox__prev" id="lightboxPrev" aria-label="上一张">&#8249;</button>
+    <button class="lightbox__next" id="lightboxNext" aria-label="下一张">&#8250;</button>
+    <div class="lightbox__content">
+      <img src="" alt="" id="lightboxImg">
+      <p class="lightbox__caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <script src="js/gallery-data.js?v=4"></script>
+  <script src="js/main.js?v=4"></script>
+</body>
+</html>
